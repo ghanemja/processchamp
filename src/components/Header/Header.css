@@ -1,0 +1,13 @@
+.pc {
+    color: #0b3866;
+    font-weight: light;
+}
+
+.site-logo {
+    padding: 1rem
+}
+
+.headeroption,
+.logoname {
+    text-shadow: 0.1rem 0.1rem 0.1rem black
+}

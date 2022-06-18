@@ -1,0 +1,167 @@
+.HomeTopImage {
+    height: 30rem;
+    width: 100%
+}
+
+h3 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    color: #0b3866;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2rem;
+    padding-top: 5rem
+}
+
+h6:hover {
+    font-size: larger;
+    text-decoration-color: #126BC5;
+}
+
+p {
+    padding: 0.5rem;
+    font-weight: light;
+    color: #0b3866;
+    font-size: larger
+}
+
+.video-section {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+}
+
+#video {
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+    display: flex;
+    height: 100rem;
+    width: 100%;
+}
+
+#intro-message {
+    /* position: relative; */
+    color: white;
+}
+
+#benefits,
+.methods {
+    padding-top: 5rem;
+    background: #fff;
+    z-index: 1;
+    box-sizing: border-box;
+    margin: 0;
+    display: block;
+}
+
+#benefits {
+    height: 100vh
+}
+
+.methods {
+    height: 200vh
+}
+
+.footer {
+    position: relative
+}
+
+.benefit-item {
+    border: 0.05rem solid rgba(232, 232, 241, 0.5);
+    margin: 1rem;
+    background-color: #f5f6f7;
+    border-radius: 1rem;
+    box-shadow: 0.3rem 0.3rem 0.3rem 0.003rem rgb(141, 141, 145)
+}
+
+.benefit-image {
+    padding: 1rem
+}
+
+.titletext {
+    font-size: 2rem;
+}
+
+.method-list {
+    list-style: none
+}
+
+li {
+    padding-top: 4rem
+}
+
+.videoPlay {
+    width: 100%
+}
+
+.slide-left {
+    animation-duration: 3s;
+    animation-name: slidein-left;
+    animation-delay: 3s
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .slide-right {
+        transition: margin-right 100%, margin-right 0%
+    }
+}
+
+
+/* .slide-right {
+    animation-duration: 3s;
+    animation-name: slidein-right;
+} */
+
+.slide-up {
+    animation-duration: 2s;
+    animation-name: slide-up
+}
+
+@keyframes slide-up {
+    from {
+        padding-top: 20rem;
+    }
+
+    to {
+        padding-top: 0
+    }
+}
+
+@keyframes slidein-right {
+    from {
+        margin-right: 100%;
+        width: 300%;
+    }
+
+    to {
+        margin-right: 0%;
+        width: 100%
+    }
+}
+
+@keyframes slidein-left {
+    from {
+        margin-left: 100%;
+        width: 300%;
+        visibility: hidden;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+        visibility: visible;
+    }
+}
+
+.fill {
+    margin: 0;
+    padding: 0
+}

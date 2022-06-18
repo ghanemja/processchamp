@@ -1,0 +1,38 @@
+.aboutImage {
+    display: block;
+    /* margin: auto; */
+    /* padding: 2rem; */
+    width: 100%;
+    opacity: 40%;
+    height: 100%;
+    position: absolute;
+}
+
+.aboutContainer {
+    position: relative;
+}
+
+.aboutText {
+    position: relative;
+    padding: 1rem;
+    text-align: center;
+}
+
+.textBlock {
+    padding-top: 2rem;
+}
+
+.aboutList {
+    padding-top: 1rem;
+    text-align: center;
+    font-weight: bolder;
+    list-style-type: none;
+}
+
+.aboutList li {
+    padding: 0
+}
+
+.defaultText {
+    color: black
+}

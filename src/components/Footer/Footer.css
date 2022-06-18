@@ -1,0 +1,24 @@
+p {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.text-reset,
+.contact-text {
+    display: block;
+    text-align: start;
+}
+
+.linkedin {
+    margin-right: 2rem
+}
+
+.demo:hover {
+    background-color: rgb(232, 227, 227) !important;
+    text-decoration-color: white !important;
+    border: none !important;
+}
+
+.demo-text:hover {
+    text-decoration-color: white;
+}
