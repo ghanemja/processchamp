@@ -1,0 +1,20 @@
+.pc {
+    color: #0b3866;
+    font-weight: light;
+}
+
+.site-logo {
+    padding: 1rem
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: black !important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: white !important
+}
+
+.no-color {
+    background: transparent;
+}
