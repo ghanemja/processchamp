@@ -87,7 +87,7 @@ p {
     margin: 1rem;
     border-radius: 1rem;
     padding: 0.5rem;
-    box-shadow: 0.1rem 0.1rem 0.2rem 0.2rem #0b3866;
+    box-shadow: 0.1rem 0.1rem 0.1rem black;
 
 }
 
@@ -112,9 +112,9 @@ li {
 }
 
 .slide-left {
-    animation-duration: 3s;
+    animation-duration: 1s;
     animation-name: slidein-left;
-    animation-delay: 3s
+    animation-delay: 1s
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -216,6 +216,14 @@ li {
     font-size: calc(1.3rem + .6vw) !important
 } */
 
+.acc-title {
+    font-size: calc(1.375rem + 1.5vw);
+}
+
+.acc-title-lg {
+    font-size: calc(1.375rem + 1.5vw);
+}
+
 @media screen and (max-width: 500px) {
     .titletext {
         font-size: small
@@ -234,7 +242,16 @@ li {
     .demo-title {
         font-size: large
     }
+
+    .acc-title {
+        font-size: medium
+    }
+
+    .acc-title-lg {
+        font-size: x-large
+    }
 }
+
 
 .demo {
     color: white;
@@ -243,7 +260,8 @@ li {
 }
 
 .demo-title {
-    padding-top: 8rem
+    padding-top: 8rem;
+    color: white
 }
 
 /* .demo-button:hover {

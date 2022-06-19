@@ -291,13 +291,15 @@ export default function Home() {
         </div>
       </div>
       <div className="methods h-auto">
-        <p className="fw-1 fs-1">How Do We Do It?</p>
+        <p className="fw-1 acc-title-lg">How Do We Do It?</p>
         <br></br>
-        <p className="fs-1 pb-4">3 simple steps...</p>
+        <p className="pb-4 acc-title">3 simple steps...</p>
         <Accordion className=".bg-light p-3">
           <Accordion.Item eventKey="0">
             <Accordion.Header>
-              <p className="fw-light fs-1 ms-auto">1. Scan Critical Datums</p>
+              <p className="acc-title fw-light ms-auto">
+                1. Scan Critical Datums
+              </p>
             </Accordion.Header>
             <Accordion.Body className="p-0">
               <p>insert smart words here</p>
@@ -308,7 +310,7 @@ export default function Home() {
           </Accordion.Item>
           <Accordion.Item eventKey="1">
             <Accordion.Header>
-              <p className="fw-light fs-1 ms-auto">
+              <p className="acc-title fw-light ms-auto">
                 2. Proprietary AI Analyzes Sensor Data and Instructs Robot
               </p>
             </Accordion.Header>
@@ -322,7 +324,7 @@ export default function Home() {
           </Accordion.Item>
           <Accordion.Item eventKey="2">
             <Accordion.Header>
-              <p className="fw-light fs-1 ms-auto">
+              <p className="acc-title fw-light ms-auto">
                 3. Optimizes Positions to the Critical Datums
               </p>
             </Accordion.Header>
