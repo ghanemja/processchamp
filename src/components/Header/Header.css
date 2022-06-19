@@ -18,3 +18,8 @@
 .no-color {
     background: transparent;
 }
+
+.demo:hover {
+    color: black;
+    background-color: white;
+}

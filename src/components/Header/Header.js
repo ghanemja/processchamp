@@ -3,6 +3,7 @@ import PClogo from "../../images/pc-logo.png";
 import "./Header.css";
 import React from "react";
 import { useState } from "react";
+import { Button } from "react-bootstrap";
 
 export default function Header() {
   const [color, setColor] = useState(false);
@@ -37,6 +38,15 @@ export default function Header() {
           ></img>
           ProcessChamp
         </Navbar.Brand>
+        <Button
+          // style={{ backgroundColor: "white" }}
+          className="demo ml-2 round border btn-lg"
+          href="/contact"
+        >
+          <p style={{ color: "white" }} className="fs-6">
+            Book A Demo!
+          </p>
+        </Button>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto">
