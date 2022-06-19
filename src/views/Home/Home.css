@@ -230,4 +230,22 @@ li {
         width: 1rem;
         padding: 1rem
     }
+
+    .demo-title {
+        font-size: large
+    }
 }
+
+.demo {
+    color: white;
+    padding-bottom: 8rem;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, .93), transparent), url("../../images/demo.png");
+}
+
+.demo-title {
+    padding-top: 8rem
+}
+
+/* .demo-button:hover {
+    font-size: 20rem
+} */

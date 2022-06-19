@@ -20,7 +20,7 @@ export default function Footer() {
 
         <Button
           style={{ backgroundColor: "#0b3866" }}
-          className="demo ml-2 bg-light round border border-dark text-dark"
+          className="demo ml-2 bg-light round border"
           href="/contact"
         >
           Book A Demo!

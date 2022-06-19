@@ -5,6 +5,7 @@ import { Accordion } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Slide from "react-reveal/Slide";
 import Fade from "react-reveal/Fade";
+import { Button } from "react-bootstrap";
 import "animate.css/animate.min.css";
 // import VisibilitySensor from "react-visibility-sensor";
 
@@ -329,6 +330,20 @@ export default function Home() {
             </Accordion.Body>
           </Accordion.Item>
         </Accordion>
+      </div>
+      <div className="demo">
+        <h1 className="demo-title">
+          Want to learn more? Contact us and book a demo!
+        </h1>
+        <Button
+          style={{ backgroundColor: "white" }}
+          className="demo ml-2 bg-light round border btn-lg"
+          href="/contact"
+        >
+          <p style={{ color: "white" }} className="fs-3 demo-button">
+            Book A Demo!
+          </p>
+        </Button>
       </div>
     </>
   );
