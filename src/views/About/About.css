@@ -67,7 +67,7 @@
 
 .special {
     background-color: black;
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, .93), transparent), url("../../images/about.JPG");
+    /* background-image: linear-gradient(0deg, rgba(0, 0, 0, .93), transparent), url("../../images/about.JPG"); */
     background-attachment: scroll fixed;
     -webkit-box-pack: center;
     background-position: 0 0 0 0;
