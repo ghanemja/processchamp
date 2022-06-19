@@ -53,7 +53,7 @@ export default function Contact() {
               />
             </Form.Group>
             <br></br>
-            <Button variant="primary" href="/thank-you" type="submit">
+            <Button variant="dark" href="/thank-you" type="submit">
               Submit
             </Button>
           </Form>

@@ -300,6 +300,7 @@ export default function Home() {
               <p className="fw-light fs-1 ms-auto">1. Scan Critical Datums</p>
             </Accordion.Header>
             <Accordion.Body className="p-0">
+              <p>insert smart words here</p>
               {/* <video autoPlay loop muted className="videoPlay">
                 <source src={video1} type="video/mp4" />
               </video> */}
@@ -312,6 +313,8 @@ export default function Home() {
               </p>
             </Accordion.Header>
             <Accordion.Body className="p-0">
+              <p>insert smart words here</p>
+
               {/* <video autoPlay loop muted className="videoPlay">
                 <source src={video1} type="video/mp4" />
               </video> */}
@@ -324,6 +327,8 @@ export default function Home() {
               </p>
             </Accordion.Header>
             <Accordion.Body className="p-0">
+              <p>insert smart words here</p>
+
               {/* <video autoPlay loop muted className="videoPlay">
                 <source src={video1} type="video/mp4" />
               </video> */}
