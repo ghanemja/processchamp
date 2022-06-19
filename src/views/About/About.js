@@ -6,9 +6,18 @@ import Fade from "react-reveal/Fade";
 
 export default function About() {
   return (
-    <div>
+    // <div className="special">
+    <div
+      style={{
+        background:
+          "radial-gradient(circle, rgba(2,0,36,0.6909357492997199) 12%, rgba(11,56,102,1) 46%, rgba(2,0,36,1) 87%)",
+      }}
+    >
       <Header />
-      <div className="aboutContainer">
+      <div
+        className="aboutContainer"
+        style={{ marginBottom: "3rem", marginTop: "3rem" }}
+      >
         {/* <img className="aboutImage" src={RobotImage} alt="robot"></img> */}
         <div className="aboutText">
           <Fade bottom cascade spy={true} appear={true}>

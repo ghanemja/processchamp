@@ -17,37 +17,19 @@ export default function Footer() {
             ></img>
           </a>
         </div>
+
         <Button
-          className="demo ml-2 bg-light round border border-dark text-dark"
+          style={{ backgroundColor: "#0b3866" }}
+          className="demo ml-2 bg-light round border"
           href="/contact"
         >
           Book A Demo!
         </Button>
-        <div>
-          <a href="/" className="me-4 text-reset">
-            <i className="fab fa-facebook-f"></i>
-          </a>
-          <a href="/" className="me-4 text-reset">
-            <i className="fab fa-twitter"></i>
-          </a>
-          <a href="/" className="me-4 text-reset">
-            <i className="fab fa-google"></i>
-          </a>
-          <a href="/" className="me-4 text-reset">
-            <i className="fab fa-instagram"></i>
-          </a>
-          <a href="/" className="me-4 text-reset">
-            <i className="fab fa-linkedin"></i>
-          </a>
-          <a href="/" className="me-4 text-reset">
-            <i className="fab fa-github"></i>
-          </a>
-        </div>
       </section>
 
       <section className="">
         <div className="container text-center text-md-start mt-5">
-          <div className="row mt-3">
+          <div className="row mt-3" style={{ textAlign: "center" }}>
             <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
               <h6 className="text-uppercase fw-bold mb-4">
                 <i className="fas fa-gem me-3"></i>ProcessChamp

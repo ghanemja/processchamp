@@ -7,7 +7,27 @@
     padding: 1rem
 }
 
-.headeroption,
-.logoname {
-    text-shadow: 0.1rem 0.1rem 0.1rem black
+.navbar-light .navbar-nav .nav-link {
+    color: black !important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: white !important
+}
+
+.no-color {
+    background: transparent;
+}
+
+.demo:hover {
+    color: black;
+    background-color: white;
+}
+
+
+@media screen and (max-width: 500px) {
+    .demo {
+        margin-left: 0
+    }
+
 }

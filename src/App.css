@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   z-index: 998;
+  scroll-behavior: smooth
 }
 
 .App-logo {

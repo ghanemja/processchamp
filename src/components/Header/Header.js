@@ -1,38 +1,64 @@
 import { Navbar, NavDropdown, Container, Nav } from "react-bootstrap";
 import PClogo from "../../images/pc-logo.png";
 import "./Header.css";
+import React from "react";
+import { useState } from "react";
+import { Button } from "react-bootstrap";
 
 export default function Header() {
+  const [color, setColor] = useState(false);
+  const changeColor = () => {
+    if (window.scrollY >= 90) {
+      setColor(true);
+    } else {
+      setColor(false);
+    }
+  };
+  window.addEventListener("scroll", changeColor);
   return (
     <Navbar
-      className="navbar navbar-expand-lg navbar-dark shadow-5-strong"
+      className={
+        color
+          ? "navbar navbar-expand-lg navbar-light sticky-top"
+          : "navbar navbar-expand-lg navbar-light sticky-top"
+      }
       expand="lg"
+      bg={color ? "white" : "white"}
       // bg="light"
       // variant="light"
     >
       <Container>
-        <Navbar.Brand className="text-light logoname" href="/">
-          <img className="site-logo" alt="processchamp" src={PClogo}></img>
+        <Navbar.Brand className="logoname" href="/">
+          <img
+            height="80"
+            width="80"
+            className="site-logo"
+            alt="processchamp"
+            src={PClogo}
+          ></img>
           ProcessChamp
         </Navbar.Brand>
+        <Button
+          // style={{ backgroundColor: "white" }}
+          className="demo ml-2 round border btn-lg"
+          href="/contact"
+        >
+          <p style={{ color: "white" }} className="fs-6">
+            Book A Demo!
+          </p>
+        </Button>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link
-              className="text-light headeroption fs-5 fw-light"
-              href="/"
-            >
+            <Nav.Link className="headeroption fs-5 fw-light" href="/">
               Home
             </Nav.Link>
-            <Nav.Link
-              className="text-light headeroption fs-5 fw-light"
-              href="/about"
-            >
+            <Nav.Link className="headeroption fs-5 fw-light" href="/about">
               About
             </Nav.Link>
             <NavDropdown
               title={
-                <span className="text-light headeroption fs-5 fw-light">
+                <span className="headeroption fs-5 fw-light">
                   Products & Services
                 </span>
               }
@@ -50,10 +76,7 @@ export default function Header() {
                 Engineering Services
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link
-              className="text-light headeroption fs-5 fw-light"
-              href="/contact"
-            >
+            <Nav.Link className="headeroption fs-5 fw-light" href="/contact">
               Contact Us
             </Nav.Link>
           </Nav>
