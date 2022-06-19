@@ -6,11 +6,18 @@ import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 export default function Contact() {
   return (
-    <div className="special">
+    <div
+      className="shadow-strong"
+      style={{
+        background: "rgb(2,0,36)",
+        background:
+          "radial-gradient(circle, rgba(2,0,36,0.6909357492997199) 12%, rgba(11,56,102,1) 46%, rgba(2,0,36,1) 87%)",
+      }}
+    >
       <div>
         <Header />
       </div>
-      <div className="contactContainer shadow">
+      <div className="contactContainer shadow mt-5 mb-5">
         <div className="title">
           <h1>How Can We Help?</h1>
           <p>

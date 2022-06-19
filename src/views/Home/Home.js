@@ -1,6 +1,6 @@
-import homevideo from "../../images/home.mp4";
+// import homevideo from "../../images/home.mp4";
 import Robot from "../../images/robot1.png";
-import video1 from "../../images/home.mp4";
+// import video1 from "../../images/home.mp4";
 import "./Home.css";
 import { Accordion } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -22,19 +22,18 @@ export default function Home() {
   return (
     <>
       <div className="video-section">
-        <VisibilitySensor partialVisibility offset={{ bottom: 100 }}>
+        {/* <VisibilitySensor partialVisibility offset={{ bottom: 100 }}>
           {({ isVisible }) => (
-            <div style={{ height: 100, width: 2000 }}>
-              {isVisible ? (
-                <h1 id="intro-message" className="slide-up">
-                  Autonomous, AI-driven Manufacturing Like the World Has Never
-                  Seen
-                </h1>
-              ) : null}
-            </div>
-          )}
-        </VisibilitySensor>{" "}
-        {/* <VisibilitySensor partialVisibility offset={{ bottom: 200 }}>
+            <div style={{ height: 100, width: "auto" }}>
+              {isVisible ? ( */}
+        <h1 id="intro-message" className="slide-up">
+          Autonomous, AI-driven Manufacturing Like the World Has Never Seen
+        </h1>
+        {/* ) : null} */}
+      </div>
+      {/* )}
+        </VisibilitySensor>{" "} */}
+      {/* <VisibilitySensor partialVisibility offset={{ bottom: 200 }}>
           {({ isVisible }) => (
             <div
               style={{
@@ -57,12 +56,12 @@ export default function Home() {
             </div>
           )}
         </VisibilitySensor>{" "} */}
-        <video autoPlay loop muted id="video">
+      {/* <video autoPlay loop muted id="video">
           <source src={homevideo} type="video/mp4" />
-        </video>
-      </div>
+        </video> */}
+      {/* </div> */}
       <div id="benefits">
-        <p className="titletext pb-5">
+        <p className="titletext pb-5 pl-1 pr-1">
           We create modular smart work cells with factory mobility without the
           need for skilled labor, resulting in...
         </p>
@@ -153,15 +152,15 @@ export default function Home() {
           )}
         </VisibilitySensor>{" "} */}
       {/* </div> */}
-      <div className="products special" style={{ height: "auto" }}>
+      <div className="products">
         <p className="fw-1 fs-1 text-light pt-5" style={{ color: "black" }}>
           Products
         </p>
         <div className="row icons">
           <div className="col-sm-4">
             <Roll bottom>
-              <div className="benefit-item">
-                <img className="benefit-image" src={Robot} alt="Robot"></img>
+              <div className="product-item">
+                {/* <img className="benefit-image" src={Robot} alt="Robot"></img> */}
                 <p>
                   <a
                     className="geo-product"
@@ -178,8 +177,8 @@ export default function Home() {
             </Roll>
             <br></br>
             <Roll bottom>
-              <div className="benefit-item">
-                <img className="benefit-image" src={Robot} alt="Robot"></img>
+              <div className="product-item">
+                {/* <img className="benefit-image" src={Robot} alt="Robot"></img> */}
                 <p>
                   <a
                     className="geo-product"
@@ -197,8 +196,8 @@ export default function Home() {
           </div>
           <div className="col-sm-4">
             <Roll bottom>
-              <div className="benefit-item">
-                <img className="benefit-image" src={Robot} alt="Robot"></img>
+              <div className="product-item">
+                {/* <img className="benefit-image" src={Robot} alt="Robot"></img> */}
                 <p>
                   <a
                     className="geo-product"
@@ -215,8 +214,8 @@ export default function Home() {
             </Roll>
             <br></br>
             <Roll bottom>
-              <div className="benefit-item">
-                <img className="benefit-image" src={Robot} alt="Robot"></img>
+              <div className="product-item">
+                {/* <img className="benefit-image" src={Robot} alt="Robot"></img> */}
                 <p>
                   <a
                     className="geo-product"
@@ -234,8 +233,8 @@ export default function Home() {
           </div>
           <div className="col-sm-4">
             <Roll bottom>
-              <div className="benefit-item">
-                <img className="benefit-image" src={Robot} alt="Robot"></img>
+              <div className="product-item">
+                {/* <img className="benefit-image" src={Robot} alt="Robot"></img> */}
                 <p>
                   <a
                     className="geo-product"
@@ -252,8 +251,8 @@ export default function Home() {
             </Roll>
             <br></br>
             <Roll bottom>
-              <div className="benefit-item">
-                <img className="benefit-image" src={Robot} alt="Robot"></img>
+              <div className="product-item">
+                {/* <img className="benefit-image" src={Robot} alt="Robot"></img> */}
                 <p>
                   <a
                     className="geo-product"
@@ -281,9 +280,9 @@ export default function Home() {
               <p className="fw-light fs-1 ms-auto">1. Scan Critical Datums</p>
             </Accordion.Header>
             <Accordion.Body className="p-0">
-              <video autoPlay loop muted className="videoPlay">
+              {/* <video autoPlay loop muted className="videoPlay">
                 <source src={video1} type="video/mp4" />
-              </video>
+              </video> */}
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="1">
@@ -293,9 +292,9 @@ export default function Home() {
               </p>
             </Accordion.Header>
             <Accordion.Body className="p-0">
-              <video autoPlay loop muted className="videoPlay">
+              {/* <video autoPlay loop muted className="videoPlay">
                 <source src={video1} type="video/mp4" />
-              </video>
+              </video> */}
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="2">
@@ -305,9 +304,9 @@ export default function Home() {
               </p>
             </Accordion.Header>
             <Accordion.Body className="p-0">
-              <video autoPlay loop muted className="videoPlay">
+              {/* <video autoPlay loop muted className="videoPlay">
                 <source src={video1} type="video/mp4" />
-              </video>
+              </video> */}
             </Accordion.Body>
           </Accordion.Item>
         </Accordion>

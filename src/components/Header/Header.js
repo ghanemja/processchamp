@@ -19,10 +19,10 @@ export default function Header() {
       className={
         color
           ? "navbar navbar-expand-lg navbar-light sticky-top"
-          : "navbar navbar-expand-lg navbar-dark sticky-top"
+          : "navbar navbar-expand-lg navbar-light sticky-top"
       }
       expand="lg"
-      bg={color ? "white" : ""}
+      bg={color ? "white" : "white"}
       // bg="light"
       // variant="light"
     >

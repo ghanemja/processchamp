@@ -5,8 +5,8 @@ p {
 
 .text-reset,
 .contact-text {
-    display: block;
-    text-align: start;
+    /* display: block;
+    text-align: start; */
 }
 
 .linkedin {
