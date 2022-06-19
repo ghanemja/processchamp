@@ -211,3 +211,23 @@ li {
     /* align-items: center;
     justify-content: center; */
 }
+
+/* .benefit {
+    font-size: calc(1.3rem + .6vw) !important
+} */
+
+@media screen and (max-width: 500px) {
+    .titletext {
+        font-size: small
+    }
+
+    .benefit {
+        font-size: small;
+    }
+
+    .icon {
+        height: 1rem;
+        width: 1rem;
+        padding: 1rem
+    }
+}

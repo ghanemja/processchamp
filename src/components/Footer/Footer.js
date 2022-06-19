@@ -17,32 +17,14 @@ export default function Footer() {
             ></img>
           </a>
         </div>
+
         <Button
+          style={{ backgroundColor: "#0b3866" }}
           className="demo ml-2 bg-light round border border-dark text-dark"
           href="/contact"
         >
           Book A Demo!
         </Button>
-        <div>
-          <a href="/" className="me-4 text-reset">
-            <i className="fab fa-facebook-f"></i>
-          </a>
-          <a href="/" className="me-4 text-reset">
-            <i className="fab fa-twitter"></i>
-          </a>
-          <a href="/" className="me-4 text-reset">
-            <i className="fab fa-google"></i>
-          </a>
-          <a href="/" className="me-4 text-reset">
-            <i className="fab fa-instagram"></i>
-          </a>
-          <a href="/" className="me-4 text-reset">
-            <i className="fab fa-linkedin"></i>
-          </a>
-          <a href="/" className="me-4 text-reset">
-            <i className="fab fa-github"></i>
-          </a>
-        </div>
       </section>
 
       <section className="">

@@ -4,7 +4,7 @@ import "./Home.css";
 import { Accordion } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Slide from "react-reveal/Slide";
-import Roll from "react-reveal/Roll";
+import Fade from "react-reveal/Fade";
 import "animate.css/animate.min.css";
 // import VisibilitySensor from "react-visibility-sensor";
 
@@ -73,10 +73,14 @@ export default function Home() {
           <div className="benefit-item">
             <div className="row">
               <div className="col-3">
-                <FontAwesomeIcon size="3x" icon={faScrewdriverWrench} />
+                <FontAwesomeIcon
+                  className="icon"
+                  size="3x"
+                  icon={faScrewdriverWrench}
+                />
               </div>
               <div className="col-6">
-                <p className="p-2 fs-3">Fixtureless Tooling</p>
+                <p className="benefit p-2">Fixtureless Tooling</p>
               </div>
             </div>
           </div>
@@ -85,10 +89,10 @@ export default function Home() {
           <div className="benefit-item">
             <div className="row">
               <div className="col-3">
-                <FontAwesomeIcon size="3x" icon={faMaximize} />
+                <FontAwesomeIcon className="icon" size="3x" icon={faMaximize} />
               </div>
               <div className="col-6">
-                <p className="p-2 fs-3">High Degree of Flexibility</p>
+                <p className="benefit p-2">High Degree of Flexibility</p>
               </div>
             </div>
           </div>
@@ -97,10 +101,14 @@ export default function Home() {
           <div className="benefit-item">
             <div className="row">
               <div className="col-3">
-                <FontAwesomeIcon size="3x" icon={faPersonArrowDownToLine} />
+                <FontAwesomeIcon
+                  className="icon"
+                  size="3x"
+                  icon={faPersonArrowDownToLine}
+                />
               </div>
               <div className="col-6">
-                <p className="p-2 fs-3">
+                <p className="benefit p-2">
                   Significant Reduction in Skilled Labor
                 </p>
               </div>
@@ -111,10 +119,14 @@ export default function Home() {
           <div className="benefit-item">
             <div className="row">
               <div className="col-3">
-                <FontAwesomeIcon size="3x" icon={faStopwatch} />
+                <FontAwesomeIcon
+                  className="icon"
+                  size="3x"
+                  icon={faStopwatch}
+                />
               </div>
               <div className="col-6">
-                <p className="p-2 fs-3">Reduction in Set-Up Time</p>
+                <p className="benefit p-2">Reduction in Set-Up Time</p>
               </div>
             </div>
           </div>
@@ -123,10 +135,14 @@ export default function Home() {
           <div className="benefit-item">
             <div className="row">
               <div className="col-3">
-                <FontAwesomeIcon size="3x" icon={faFileCircleCheck} />
+                <FontAwesomeIcon
+                  className="icon"
+                  size="3x"
+                  icon={faFileCircleCheck}
+                />
               </div>
               <div className="col-6">
-                <p className="p-2 fs-3">Measureable Quality Improvement</p>
+                <p className="benefit p-2">Measureable Quality Improvement</p>
               </div>
             </div>
           </div>
@@ -135,10 +151,14 @@ export default function Home() {
           <div className="benefit-item slide-right">
             <div className="row">
               <div className="col-3">
-                <FontAwesomeIcon size="3x" icon={faHandHoldingDollar} />
+                <FontAwesomeIcon
+                  className="icon"
+                  size="3x"
+                  icon={faHandHoldingDollar}
+                />
               </div>
               <div className="col-6">
-                <p className="p-2 fs-3">
+                <p className="benefit p-2">
                   Reduction in Capital Expenditures and Operating Costs
                 </p>
               </div>
@@ -157,7 +177,7 @@ export default function Home() {
         </p>
         <div className="row icons">
           <div className="col-sm-4">
-            <Roll bottom>
+            <Fade>
               <div className="product-item">
                 {/* <img className="benefit-image" src={Robot} alt="Robot"></img> */}
                 <p>
@@ -173,9 +193,9 @@ export default function Home() {
                   </a>
                 </p>
               </div>
-            </Roll>
+            </Fade>
             <br></br>
-            <Roll bottom>
+            <Fade>
               <div className="product-item">
                 {/* <img className="benefit-image" src={Robot} alt="Robot"></img> */}
                 <p>
@@ -191,10 +211,10 @@ export default function Home() {
                   </a>
                 </p>
               </div>
-            </Roll>
+            </Fade>
           </div>
           <div className="col-sm-4">
-            <Roll bottom>
+            <Fade>
               <div className="product-item">
                 {/* <img className="benefit-image" src={Robot} alt="Robot"></img> */}
                 <p>
@@ -210,9 +230,9 @@ export default function Home() {
                   </a>
                 </p>
               </div>
-            </Roll>
+            </Fade>
             <br></br>
-            <Roll bottom>
+            <Fade>
               <div className="product-item">
                 {/* <img className="benefit-image" src={Robot} alt="Robot"></img> */}
                 <p>
@@ -228,10 +248,10 @@ export default function Home() {
                   </a>
                 </p>
               </div>
-            </Roll>
+            </Fade>
           </div>
           <div className="col-sm-4">
-            <Roll bottom>
+            <Fade>
               <div className="product-item">
                 {/* <img className="benefit-image" src={Robot} alt="Robot"></img> */}
                 <p>
@@ -247,9 +267,9 @@ export default function Home() {
                   </a>
                 </p>{" "}
               </div>
-            </Roll>
+            </Fade>
             <br></br>
-            <Roll bottom>
+            <Fade>
               <div className="product-item">
                 {/* <img className="benefit-image" src={Robot} alt="Robot"></img> */}
                 <p>
@@ -265,7 +285,7 @@ export default function Home() {
                   </a>
                 </p>
               </div>
-            </Roll>
+            </Fade>
           </div>
         </div>
       </div>
