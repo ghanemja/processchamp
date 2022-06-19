@@ -9,7 +9,6 @@ export default function Contact() {
     <div
       className="shadow-strong"
       style={{
-        background: "rgb(2,0,36)",
         background:
           "radial-gradient(circle, rgba(2,0,36,0.6909357492997199) 12%, rgba(11,56,102,1) 46%, rgba(2,0,36,1) 87%)",
       }}

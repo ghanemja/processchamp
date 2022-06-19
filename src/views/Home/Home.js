@@ -1,5 +1,4 @@
 // import homevideo from "../../images/home.mp4";
-import Robot from "../../images/robot1.png";
 // import video1 from "../../images/home.mp4";
 import "./Home.css";
 import { Accordion } from "react-bootstrap";
@@ -7,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Slide from "react-reveal/Slide";
 import Roll from "react-reveal/Roll";
 import "animate.css/animate.min.css";
-import VisibilitySensor from "react-visibility-sensor";
+// import VisibilitySensor from "react-visibility-sensor";
 
 import {
   faFileCircleCheck,
