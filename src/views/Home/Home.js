@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Slide from "react-reveal/Slide";
 import Fade from "react-reveal/Fade";
 import "animate.css/animate.min.css";
-import { Form, Button, InputGroup, FormControl } from "react-bootstrap";
+import { Form, Button } from "react-bootstrap";
 import React from "react";
 // import VisibilitySensor from "react-visibility-sensor";
 
