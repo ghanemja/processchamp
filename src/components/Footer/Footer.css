@@ -5,12 +5,8 @@ p {
 
 .text-reset,
 .contact-text {
-    <<<<<<< HEAD
     /* display: block;
     text-align: start; */
-    =======display: block;
-    text-align: start;
-    >>>>>>>main
 }
 
 .linkedin {
@@ -33,16 +29,13 @@ p {
         padding: 0;
         line-height: 2
     }
-
     .aboutList {
         padding: 0;
         font-size: x-small;
         padding-top: 1rem
     }
-
     .aboutContainer {
         padding: 0;
         margin: 1rem
     }
-
 } */
