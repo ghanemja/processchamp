@@ -5,8 +5,9 @@ import { Accordion } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Slide from "react-reveal/Slide";
 import Fade from "react-reveal/Fade";
-import { Button } from "react-bootstrap";
 import "animate.css/animate.min.css";
+import { Form, Button, InputGroup, FormControl } from "react-bootstrap";
+import React from "react";
 // import VisibilitySensor from "react-visibility-sensor";
 
 import {
@@ -31,6 +32,61 @@ export default function Home() {
         </h1>
         {/* ) : null} */}
       </div>
+      <hr></hr>
+      <div className="row demo-video d-flex justify-content-center">
+        <div
+          className="col"
+          style={{ paddingLeft: "2rem", paddingRight: "2rem" }}
+        >
+          <iframe
+            id="video-demo"
+            title="vimeo-player"
+            src="https://player.vimeo.com/video/576870197?h=6a6142173d"
+            width="640"
+            height="360"
+            frameBorder="0"
+            allowFullScreen
+          ></iframe>
+        </div>
+        <div
+          className="col"
+          style={{ paddingLeft: "2rem", paddingRight: "2rem" }}
+        >
+          <h1>Contact Us</h1>
+          <Form>
+            <div className="col d-flex justify-content-center">
+              <Form.Group className="row-sm-3" controlId="firstName">
+                <Form.Label>First Name</Form.Label>
+                <Form.Control type="text" placeholder="Enter first name" />
+              </Form.Group>
+              <Form.Group className="row-sm-3" controlId="lastName">
+                <Form.Label>Last Name</Form.Label>
+                <Form.Control type="text" placeholder="Enter last name" />
+              </Form.Group>
+              <Form.Group className="row-sm-3" controlId="formBasicEmail">
+                <Form.Label>Email address</Form.Label>
+                <Form.Control type="email" placeholder="Enter email" />
+                <Form.Text className="text-muted">
+                  We'll never share your email with anyone else.
+                </Form.Text>
+              </Form.Group>
+            </div>
+            <Form.Group controlId="message">
+              <Form.Label>Message</Form.Label>
+              <Form.Control
+                as="textarea"
+                rows={3}
+                placeholder="Please type your inquiry in as much detail as possible so we can best assist you."
+              />
+            </Form.Group>
+            <br></br>
+            <Button variant="dark" href="/thank-you" type="submit">
+              Submit
+            </Button>
+          </Form>
+        </div>
+      </div>
+      <hr></hr>
       {/* )}
         </VisibilitySensor>{" "} */}
       {/* <VisibilitySensor partialVisibility offset={{ bottom: 200 }}>
