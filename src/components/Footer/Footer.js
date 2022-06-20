@@ -1,8 +1,6 @@
 import "./Footer.css";
 import linkedin from "../../images/linkedin.jpg";
 import { Button } from "react-bootstrap";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin } from "@fortawesome/fontawesome-free-brands";
 
 export default function Footer() {
   return (
