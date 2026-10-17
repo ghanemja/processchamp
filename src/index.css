@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+@theme {
+  /* paper */
+  --color-paper-50: #ffffff;
+  --color-paper-100: #f7f9fb;
+  --color-paper-200: #eef1f5;
+  --color-paper-300: #e3e8ee;
+  --color-line-200: #dfe4ea;
+  --color-line-300: #c8d0da;
+
+  /* ink */
+  --color-ink-900: #0c131b;
+  --color-ink-700: #27323f;
+  --color-ink-500: #4d5a69;
+  --color-ink-400: #6b7886;
+  --color-ink-300: #93a0ae;
+
+  /* signal */
+  --color-blue-800: #06306b;
+  --color-blue-700: #0a4aa0;
+  --color-blue-600: #0d5fc4;
+  --color-blue-500: #1668dd;
+  --color-blue-200: #bcd7f8;
+  --color-blue-100: #e3eefc;
+  --color-pass-600: #0f8a4d;
+  --color-flag-600: #c3362f;
+
+  --font-sans: "Archivo", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  background: var(--color-paper-100);
+  color: var(--color-ink-900);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  letter-spacing: -0.022em;
+  font-weight: 700;
+}
+
+::selection { background: var(--color-blue-500); color: #fff; }
+
+::-webkit-scrollbar { width: 12px; }
+::-webkit-scrollbar-track { background: var(--color-paper-200); }
+::-webkit-scrollbar-thumb { background: var(--color-line-300); }
+::-webkit-scrollbar-thumb:hover { background: var(--color-ink-400); }
+
+/* Technical label — small caps mono, used for every eyebrow and data key. */
+@utility label {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-blue-600);
+}
+
+@utility label-mute {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-ink-400);
+}
+
+/* Drafting grid, printed rather than glowing. */
+@utility blueprint {
+  background-image:
+    linear-gradient(to right, rgba(12,19,27,0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(12,19,27,0.045) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* Flat panel: a border and a hard offset shadow, no blur, no glass. */
+@utility panel {
+  background: var(--color-paper-50);
+  border: 1px solid var(--color-line-200);
+}
+
+@utility panel-raised {
+  background: var(--color-paper-50);
+  border: 1px solid var(--color-line-300);
+  box-shadow: 6px 6px 0 rgba(12, 19, 27, 0.06);
+}
+
+/* Frosted glass, tuned for a bright scene: real translucency and a light
+   catching edge, rather than a dark tint pretending to be glass. */
+@utility glass {
+  background: linear-gradient(150deg, rgba(255,255,255,0.80), rgba(255,255,255,0.62));
+  backdrop-filter: blur(22px) saturate(1.5);
+  -webkit-backdrop-filter: blur(22px) saturate(1.5);
+  border: 1px solid rgba(255,255,255,0.9);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.95),
+    0 1px 2px rgba(12,19,27,0.05),
+    0 18px 40px -20px rgba(12,19,27,0.28);
+}
+
+@utility glass-tint {
+  background: linear-gradient(150deg, rgba(227,238,252,0.78), rgba(255,255,255,0.58));
+  backdrop-filter: blur(22px) saturate(1.5);
+  -webkit-backdrop-filter: blur(22px) saturate(1.5);
+  border: 1px solid rgba(255,255,255,0.85);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.9),
+    0 18px 40px -20px rgba(10,74,160,0.35);
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.animate-marquee { animation: marquee 44s linear infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .animate-marquee { animation: none; }
+}
