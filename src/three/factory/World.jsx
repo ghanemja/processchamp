@@ -303,7 +303,7 @@ export default function World({ reflective = true }) {
  * running the whole length at the centre of the aisle, with bodies on it
  * between the stations as well as in them.
  */
-function TransitBody({ color = '#a4aebc' }) {
+export function TransitBody({ color = '#a4aebc' }) {
   return (
     <group>
       {/* skid */}

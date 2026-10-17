@@ -92,6 +92,28 @@ Scroll does not map to the curve linearly. `dwell()` parks the camera at a stati
 ~30% of each section and only travels at the edges, so the picture is still while you read and
 moves when you keep scrolling.
 
+### Before and after
+
+The body shop (stations 00–06) has two dressings, switched by a toggle that
+only appears in those bays. Same camera, same angle, same body — what changes
+is the floor around it:
+
+| | Conventional | With ProcessChamp |
+| --- | --- | --- |
+| Holding the part | bolted steel jig, pneumatic clamps, one per variant | robots hold it in free space |
+| Moving it | manual overhead hoist | the cell does it |
+| Checking it | gauge on a granite table, off the line | inline vision, in cycle |
+| Correcting it | rework bay, reject tag, scrap bin | deviation driven out before the joint |
+| Solving it | paper travellers on a desk, days later | control room, 38 ms |
+| The result | queued bodies, red beacons, painted hold zones | the line keeps moving |
+
+Nothing explains the difference in prose — the bay is simply re-dressed and
+the caption card collapses to its station label so it does not sit on top of
+the thing you are meant to look at. A bottleneck is drawn as what it actually
+looks like from the aisle: work piled up behind a station that is stopped.
+
+The conventional lighting is duller and warmer, and the andon towers run red.
+
 ### Keeping it one line
 
 Twelve dressed bays with their own four walls read as twelve separate rooms, so the things that

@@ -178,7 +178,7 @@ function Hero() {
   )
 }
 
-function Panel({ station, onPickVideo, activeVideo }) {
+function Panel({ station, onPickVideo, activeVideo, legacy }) {
   const { kind } = station
 
   return (
@@ -187,6 +187,7 @@ function Panel({ station, onPickVideo, activeVideo }) {
         <p className="label">{station.eyebrow}</p>
         {station.tag && <p className="label-mute hidden sm:block">{station.tag}</p>}
       </div>
+      {legacy ? null : (
       <div className="px-6 py-6 sm:px-8 sm:py-7">
         <h2 className="text-balance text-[clamp(1.4rem,2.6vw,2rem)] font-bold leading-[1.1] text-ink-900">{station.title}</h2>
         <p className="mt-4 text-pretty text-[15.5px] leading-[1.6] text-ink-700">{station.body}</p>
@@ -284,6 +285,7 @@ function Panel({ station, onPickVideo, activeVideo }) {
           </div>
         )}
       </div>
+      )}
     </div>
   )
 }
@@ -311,6 +313,7 @@ export default function Journey() {
   const [webgl, setWebgl] = useState(true)
   const [videoIdx, setVideoIdx] = useState(0)
   const [playing, setPlaying] = useState(false)
+  const [mode, setMode] = useState('processchamp')
   const reduced = useReducedMotion()
 
   useEffect(() => {
@@ -377,6 +380,7 @@ export default function Journey() {
               specimen={video.specimen}
               benefits={BENEFITS}
               products={PRODUCTS}
+              mode={mode}
             />
           </Suspense>
         ) : (
@@ -388,6 +392,31 @@ export default function Journey() {
       </div>
 
       <Rail index={index} />
+
+      {/* Shown only in the body shop, where both versions of the bay exist. */}
+      <div
+        className="pointer-events-none fixed bottom-6 left-1/2 z-30 -translate-x-1/2 transition-all duration-300"
+        style={{ opacity: index <= 6 && active ? 1 : 0, transform: `translate(-50%, ${index <= 6 && active ? 0 : 16}px)` }}
+        aria-hidden={index > 6}
+      >
+        <div className="glass pointer-events-auto flex items-center gap-1 rounded-[4px] p-1">
+          {[
+            { id: 'conventional', label: 'Conventional plant' },
+            { id: 'processchamp', label: 'With ProcessChamp' },
+          ].map((m) => (
+            <button
+              key={m.id}
+              onClick={() => setMode(m.id)}
+              aria-pressed={mode === m.id}
+              className={`rounded-[3px] px-4 py-2.5 font-mono text-[11px] uppercase tracking-[0.08em] transition-colors ${
+                mode === m.id ? 'bg-blue-600 text-white' : 'text-ink-500 hover:text-ink-900'
+              }`}
+            >
+              {m.label}
+            </button>
+          ))}
+        </div>
+      </div>
 
       {/* the footage plays over the bay it belongs to */}
       <AnimatePresence>
@@ -437,7 +466,7 @@ export default function Journey() {
                   s.side === 'right' ? 'lg:ml-auto lg:mr-0' : s.side === 'center' ? 'lg:mx-auto' : 'lg:mr-auto lg:ml-0'
                 }`}
               >
-                {s.kind === 'hero' ? <Hero /> : <Panel station={s} onPickVideo={onPickVideo} activeVideo={videoIdx} />}
+                {s.kind === 'hero' ? <Hero /> : <Panel station={s} onPickVideo={onPickVideo} activeVideo={videoIdx} legacy={mode === 'conventional' && i <= 6} />}
               </motion.div>
             </div>
           </section>
@@ -445,7 +474,7 @@ export default function Journey() {
       </div>
 
       <div
-        className="pointer-events-none fixed bottom-6 left-1/2 z-20 hidden -translate-x-1/2 flex-col items-center gap-2 transition-opacity duration-500 lg:flex"
+        className="pointer-events-none fixed bottom-[5.5rem] left-1/2 z-20 hidden -translate-x-1/2 flex-col items-center gap-2 transition-opacity duration-500 lg:flex"
         style={{ opacity: index === 0 && active ? 1 : 0 }}
       >
         <span className="bg-white/80 px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.1em] text-ink-500 backdrop-blur">

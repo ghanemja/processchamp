@@ -3,7 +3,7 @@ import { useFrame } from '@react-three/fiber'
 import * as THREE from 'three'
 import { Blob } from './World'
 import { brushedMap, gratingMap, paintedMap } from './textures'
-import { AZURE, CYAN, GREEN } from './layout'
+import { ALERT, AZURE, CYAN, GREEN } from './layout'
 
 /** Painted enclosure walls — what actually makes one bay read differently. */
 export function Enclosure({

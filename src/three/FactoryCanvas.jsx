@@ -146,21 +146,21 @@ function BayLights() {
   )
 }
 
-function Scene({ cheap, lively, specimen, benefits, products }) {
+function Scene({ cheap, lively, specimen, benefits, products, mode }) {
   return (
     <>
       <color attach="background" args={['#dbe3ed']} />
       <fog attach="fog" args={['#dbe3ed', 48, 165]} />
       <StudioEnv />
       {/* a daylit plant: strong sky fill, roof glazing above, soft bounce */}
-      <hemisphereLight args={['#eaf2fb', '#6d7986', 0.8]} />
-      <directionalLight position={[18, 22, 14]} intensity={1.7} color="#ffffff" />
+      <hemisphereLight args={mode === 'conventional' ? ['#efe8db', '#6b6358', 0.62] : ['#eaf2fb', '#6d7986', 0.8]} />
+      <directionalLight position={[18, 22, 14]} intensity={mode === 'conventional' ? 1.25 : 1.7} color={mode === 'conventional' ? '#ffeccd' : '#ffffff'} />
       <directionalLight position={[-14, 14, -10]} intensity={0.35} color="#bcd3ea" />
       <BayLights />
       <TravelingLights />
       <CameraRig lively={lively} />
       <World reflective={!cheap} />
-      <Stations specimen={specimen} benefits={benefits} products={products} window={cheap ? 1 : 2} />
+      <Stations specimen={specimen} benefits={benefits} products={products} window={cheap ? 1 : 2} mode={mode} />
     </>
   )
 }
@@ -169,7 +169,7 @@ function Scene({ cheap, lively, specimen, benefits, products }) {
  * One persistent canvas behind the whole journey. Separate canvases per
  * section would each pay for their own WebGL context and environment map.
  */
-export default function FactoryCanvas({ active = true, lively = true, specimen, benefits, products }) {
+export default function FactoryCanvas({ active = true, lively = true, specimen, benefits, products, mode = 'processchamp' }) {
   const [degraded, setDegraded] = useState(false)
   const [low, setLow] = useState(false)
 
@@ -197,7 +197,7 @@ export default function FactoryCanvas({ active = true, lively = true, specimen, 
       <PerformanceMonitor onDecline={() => setDegraded(true)} />
       <AdaptiveDpr pixelated={false} />
       <Suspense fallback={null}>
-        <Scene cheap={cheap} lively={lively && !cheap} specimen={specimen} benefits={benefits} products={products} />
+        <Scene cheap={cheap} lively={lively && !cheap} specimen={specimen} benefits={benefits} products={products} mode={mode} />
       </Suspense>
     </Canvas>
   )
