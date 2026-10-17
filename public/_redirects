@@ -1,9 +1,10 @@
 # Legacy WordPress paths kept alive so existing links and search results survive.
+# /geoset-ai is deliberately absent: the new route has the same path, so a rule
+# here would redirect to itself and never reach the SPA fallback.
 /about-us/*     /about      301
 /about-us       /about      301
 /contact-us/*   /contact    301
 /contact-us     /contact    301
-/geoset-ai/*    /geoset-ai  301
 
 # Client-side routes fall through to the SPA shell.
 /*              /index.html 200
